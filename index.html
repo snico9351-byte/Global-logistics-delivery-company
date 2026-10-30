@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Track your parcel with Global Logistics Delivery Company.">
+  <title>Global Logistics Delivery Company | Track a Shipment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/"><span class="brand-mark">GL</span><span>GLOBAL LOGISTICS<small>DELIVERY COMPANY</small></span></a>
+  <nav><a href="#tracking">Track shipment</a><a href="#services">Our services</a><a href="#contact">Contact</a><a class="nav-cta" href="/admin">Admin</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i> YOUR PARCEL. OUR PRIORITY.</span>
+      <h1>Moving what<br>matters <em>most.</em></h1>
+      <p>Reliable delivery updates and shipment visibility, from dispatch to destination. Your delivery journey starts here.</p>
+      <a class="button button-light" href="#tracking">Track a shipment <span>↗</span></a>
+      <div class="hero-proof"><span>●</span> Clear updates at every step</div>
+    </div>
+    <div class="hero-art" aria-label="Illustration of a parcel being delivered">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="parcel"><div class="parcel-top"></div><div class="parcel-tape"></div><div class="parcel-label">GLOBAL<br>LOGISTICS</div></div>
+      <div class="route route-a"></div><div class="route route-b"></div>
+      <div class="pin pin-one">✦</div><div class="pin pin-two">↗</div>
+      <div class="art-caption">DELIVERY IN MOTION <b>→</b></div>
+    </div>
+  </section>
+  <section class="track-section" id="tracking">
+    <div class="section-kicker">SHIPMENT VISIBILITY</div>
+    <h2>Where is your parcel?</h2>
+    <p class="muted">Enter the tracking code provided by our team to view the latest shipment update.</p>
+    <form id="track-form" class="track-form">
+      <label class="sr-only" for="tracking-code">Tracking code</label>
+      <span class="search-icon">⌕</span><input id="tracking-code" placeholder="Enter your tracking code" autocomplete="off" required>
+      <button class="button button-dark" type="submit">Track parcel <span>→</span></button>
+    </form>
+    <div id="tracking-result" aria-live="polite"></div>
+  </section>
+  <section class="services" id="services">
+    <div><div class="section-kicker">WHAT WE DO</div><h2>Delivery made<br><em>straightforward.</em></h2></div>
+    <article class="service-card"><span class="service-icon">⌁</span><h3>Shipment tracking</h3><p>Check the latest recorded status of your delivery with your unique tracking code.</p></article>
+    <article class="service-card"><span class="service-icon">◇</span><h3>Delivery updates</h3><p>See status updates entered by our logistics administration team.</p></article>
+    <article class="service-card"><span class="service-icon">◎</span><h3>Customer support</h3><p>Contact our team for assistance with your shipment or delivery questions.</p></article>
+  </section>
+  <section class="contact-band" id="contact"><div><div class="section-kicker">NEED A HAND?</div><h2>We're here to help.</h2><p>Contact our support team for shipment enquiries.</p></div><div class="contact-links"><a href="https://wa.me/447348537011" target="_blank" rel="noopener">WhatsApp <b>+44 7348 537011 ↗</b></a><a href="mailto:globallogistic@fastservice.com">Email <b>globallogistic@fastservice.com ↗</b></a></div></section>
+</main>
+<footer><a class="brand brand-footer" href="/"><span class="brand-mark">GL</span><span>GLOBAL LOGISTICS<small>DELIVERY COMPANY</small></span></a><span>© <span id="year"></span> Global Logistics Delivery Company</span><a href="/admin">Administrator</a></footer>
+<script src="/app.js"></script>
+</body></html>

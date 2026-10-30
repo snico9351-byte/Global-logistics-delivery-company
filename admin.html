@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Portal | Global Logistics</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="admin-body">
+<header class="site-header admin-header"><a class="brand" href="/"><span class="brand-mark">GL</span><span>GLOBAL LOGISTICS<small>ADMINISTRATION</small></span></a><a href="/" class="back-link">← Customer website</a></header>
+<main class="admin-main">
+  <section id="login-view" class="login-card">
+    <div class="section-kicker">RESTRICTED ACCESS</div><h1>Administrator<br><em>sign in.</em></h1><p class="muted">This portal is for authorised company administrators only.</p>
+    <form id="login-form" class="admin-form">
+      <label>Username<input name="username" value="admin" autocomplete="username" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button button-dark full" type="submit">Secure sign in →</button>
+      <div id="login-message" class="form-message" aria-live="polite"></div>
+    </form>
+  </section>
+  <section id="dashboard-view" hidden>
+    <div class="dashboard-top"><div><div class="section-kicker">SHIPMENT CONTROL CENTRE</div><h1>Manage <em>deliveries.</em></h1><p class="muted">Create shipment records and publish tracking updates.</p></div><button id="logout-button" class="button button-outline">Sign out</button></div>
+    <div class="dashboard-grid">
+      <section class="panel"><h2 id="form-heading">Register a shipment</h2><p class="muted small">A tracking code is generated automatically if you leave that field blank.</p>
+        <form id="shipment-form" class="admin-form">
+          <input type="hidden" name="id">
+          <label>Item / parcel description<input name="item" maxlength="160" placeholder="e.g. Documents, personal parcel" required></label>
+          <label>Recipient name<input name="recipient" maxlength="120" placeholder="Customer name" required></label>
+          <label>Destination<input name="destination" maxlength="180" placeholder="City, country or delivery address" required></label>
+          <label>Tracking code <span class="optional">(optional)</span><input name="tracking_code" maxlength="40" placeholder="Leave blank to generate"></label>
+          <label>Shipment status<select name="status" id="status-select" required></select></label>
+          <label>Expected delivery date <span class="optional">(optional)</span><input name="expected_delivery" type="date"></label>
+          <label>Update / delivery note<textarea name="notes" rows="3" maxlength="1000" placeholder="Add an update visible to the customer"></textarea></label>
+          <div class="form-actions"><button class="button button-dark" type="submit" id="save-button">Create shipment</button><button class="button button-outline" type="button" id="cancel-edit" hidden>Cancel edit</button></div>
+          <div id="shipment-message" class="form-message" aria-live="polite"></div>
+        </form>
+      </section>
+      <section class="panel shipment-panel"><div class="list-heading"><div><h2>All shipments</h2><p class="muted small">Manage existing tracking records.</p></div><button id="refresh-button" class="button button-outline">↻ Refresh</button></div><div id="shipment-list"><p class="muted">Loading shipments…</p></div></section>
+    </div>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Global Logistics Delivery Company</span><a href="/">Customer website</a></footer>
+<script src="/admin.js"></script>
+</body></html>
